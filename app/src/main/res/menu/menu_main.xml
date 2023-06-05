@@ -1,0 +1,16 @@
+<!--
+  SPDX-FileCopyrightText: 2023 The Calyx Institute
+  SPDX-License-Identifier: Apache-2.0
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.calyxos.panic.main.MainActivity">
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="always" />
+
+</menu>

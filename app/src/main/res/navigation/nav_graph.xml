@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-FileCopyrightText: 2023 The Calyx Institute
+  SPDX-License-Identifier: Apache-2.0
+  -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="org.calyxos.panic.main.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="org.calyxos.panic.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@xml/settings_preferences" />
+    <fragment
+        android:id="@+id/appListFragment"
+        android:name="org.calyxos.panic.applist.AppListFragment"
+        android:label="App List"
+        tools:layout="@layout/fragment_app_list" />
+</navigation>
