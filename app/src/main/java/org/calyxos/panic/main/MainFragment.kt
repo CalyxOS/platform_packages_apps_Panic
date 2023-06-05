@@ -5,6 +5,7 @@
 
 package org.calyxos.panic.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.Toolbar
@@ -19,7 +20,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
 
         // Toolbar
-        view.findViewById<Toolbar>(R.id.toolbar).setOnMenuItemClickListener {
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+        if (activity?.intent?.action == Intent.ACTION_MAIN) {
+            toolbar.navigationIcon = null
+        } else {
+            toolbar.setNavigationOnClickListener { activity?.finish() }
+        }
+
+        toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.settings -> findNavController().navigate(R.id.settingsFragment)
             }

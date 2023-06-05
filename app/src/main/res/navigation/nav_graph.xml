@@ -18,7 +18,7 @@
         android:id="@+id/settingsFragment"
         android:name="org.calyxos.panic.settings.SettingsFragment"
         android:label="Settings"
-        tools:layout="@xml/settings_preferences" />
+        tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/appListFragment"
         android:name="org.calyxos.panic.applist.AppListFragment"
