@@ -19,6 +19,18 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true">
+            <!-- See https://guardianproject.info/code/panickit/ for more info -->
+            <intent-filter>
+                <action android:name="info.guardianproject.panic.action.TRIGGER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="info.guardianproject.panic.action.CONNECT" />
+                <action android:name="info.guardianproject.panic.action.DISCONNECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
