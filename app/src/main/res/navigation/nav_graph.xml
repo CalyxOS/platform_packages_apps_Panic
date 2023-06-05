@@ -24,4 +24,8 @@
         android:name="org.calyxos.panic.applist.AppListFragment"
         android:label="App List"
         tools:layout="@layout/fragment_app_list" />
+    <dialog
+        android:id="@+id/confirmationDialogFragment"
+        android:name="org.calyxos.panic.main.ConfirmationDialogFragment"
+        android:label="ConfirmationDialogFragment" />
 </navigation>
