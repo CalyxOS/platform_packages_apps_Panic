@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:navigationIcon="@drawable/ic_arrow_back" />
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/settings" />
 
     <!-- Required ViewGroup for PreferenceFragmentCompat -->
     <FrameLayout

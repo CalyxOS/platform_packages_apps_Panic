@@ -46,6 +46,9 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    lint {
+        lintConfig file("lint.xml")
+    }
 }
 
 kapt {
@@ -71,6 +74,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
 
     def hilt_version = "2.45"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
