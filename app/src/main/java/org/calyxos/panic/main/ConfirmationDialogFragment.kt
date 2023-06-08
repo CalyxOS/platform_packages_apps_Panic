@@ -13,10 +13,12 @@ import androidx.core.text.HtmlCompat
 import androidx.core.text.HtmlCompat.FROM_HTML_MODE_COMPACT
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.PanicResponder
 import org.calyxos.panic.R
 
-class ConfirmationDialogFragment : DialogFragment() {
+@AndroidEntryPoint(DialogFragment::class)
+class ConfirmationDialogFragment : Hilt_ConfirmationDialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val packageManager = requireContext().packageManager

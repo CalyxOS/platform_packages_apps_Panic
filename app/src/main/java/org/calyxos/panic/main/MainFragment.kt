@@ -12,9 +12,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import dagger.hilt.android.AndroidEntryPoint
 import org.calyxos.panic.R
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+@AndroidEntryPoint(Fragment::class)
+class MainFragment : Hilt_MainFragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

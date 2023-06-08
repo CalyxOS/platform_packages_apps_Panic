@@ -8,10 +8,12 @@ package org.calyxos.panic.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.PanicResponder
 import org.calyxos.panic.R
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint(AppCompatActivity::class)
+class MainActivity : Hilt_MainActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

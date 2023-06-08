@@ -10,9 +10,11 @@ import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceFragmentCompat
+import dagger.hilt.android.AndroidEntryPoint
 import org.calyxos.panic.R
 
-class SettingsFragment : PreferenceFragmentCompat() {
+@AndroidEntryPoint(PreferenceFragmentCompat::class)
+class SettingsFragment : Hilt_SettingsFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

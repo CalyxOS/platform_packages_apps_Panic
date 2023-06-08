@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.dagger.hilt.android'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
     id 'org.jlleitschuh.gradle.ktlint'
 }
 
@@ -46,6 +48,14 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes true
+}
+
+hilt {
+    enableAggregatingTask false
+}
+
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -61,4 +71,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation "androidx.preference:preference-ktx:1.2.0"
+
+    def hilt_version = "2.45"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+
 }
