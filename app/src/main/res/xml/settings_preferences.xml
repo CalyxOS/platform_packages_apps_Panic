@@ -3,6 +3,14 @@
   SPDX-FileCopyrightText: 2023 The Calyx Institute
   SPDX-License-Identifier: Apache-2.0
   -->
-<PreferenceScreen>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:icon="@drawable/ic_exit"
+        app:key="exit_app"
+        app:summary="@string/exit_app_desc"
+        app:title="@string/exit_app_title" />
 
 </PreferenceScreen>

@@ -24,4 +24,6 @@
 
     <!-- Settings Fragment -->
     <string name="settings">Settings</string>
+    <string name="exit_app_title">Exit app</string>
+    <string name="exit_app_desc">Close this app after running panic actions</string>
 </resources>
