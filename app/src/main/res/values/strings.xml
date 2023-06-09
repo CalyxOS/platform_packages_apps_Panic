@@ -10,6 +10,7 @@
     <string name="add">Add app</string>
     <string name="main_frag_title">Uninstall apps</string>
     <string name="main_frag_subtitle">Apps on this screen will be uninstalled with their data wiped on panic</string>
+    <string name="panic_action_title">Running panic actions!</string>
 
     <!-- Confirmation DialogFragment -->
     <string name="confirmation_title">Confirm Panic App</string>

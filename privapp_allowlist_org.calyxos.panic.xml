@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-FileCopyrightText: 2023 The Calyx Institute
+  SPDX-License-Identifier: Apache-2.0
+  -->
+<permissions>
+    <privapp-permissions package="org.calyxos.panic">
+        <permission name="android.permission.DELETE_PACKAGES" />
+    </privapp-permissions>
+</permissions>
