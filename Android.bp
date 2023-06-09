@@ -40,11 +40,23 @@ android_app {
         proguard_flags_files: [
             "app/proguard-rules.pro",
         ],
-    }
+    },
+
+    required: [
+        "privapp_allowlist_org.calyxos.panic",
+    ],
 }
 
 java_import {
     name: "info.guardianproject.panic",
     jars: ["app/libs/info.guardianproject.panic-1.0.jar"],
     sdk_version: "current",
+}
+
+prebuilt_etc {
+    name: "privapp_allowlist_org.calyxos.panic",
+    src: "privapp_allowlist_org.calyxos.panic.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    filename_from_src: true,
 }
