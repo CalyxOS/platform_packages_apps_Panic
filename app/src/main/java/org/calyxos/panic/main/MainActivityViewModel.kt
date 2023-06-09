@@ -52,4 +52,12 @@ class MainActivityViewModel @Inject constructor(
             )
         }
     }
+
+    fun uninstallPanicApps() {
+        appList.value
+            .filter { it.panicApp }
+            .forEach {
+                CommonUtils.uninstallPackage(context.packageManager, it.packageName)
+            }
+    }
 }
