@@ -6,6 +6,7 @@
 package org.calyxos.panic.main
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.Toolbar
@@ -21,14 +22,21 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import org.calyxos.panic.R
 import org.calyxos.panic.applist.AppListRVAdapter
+import org.calyxos.panic.utils.CommonUtils.panicAppListKey
 import javax.inject.Inject
 
 @AndroidEntryPoint(Fragment::class)
-class MainFragment : Hilt_MainFragment(R.layout.fragment_main) {
+class MainFragment :
+    Hilt_MainFragment(R.layout.fragment_main),
+    SharedPreferences.OnSharedPreferenceChangeListener {
 
     @Inject
     lateinit var appListAdapterFactory: AppListRVAdapter.AppListAdapterFactory
 
+    @Inject
+    lateinit var sharedPreferences: SharedPreferences
+
+    private lateinit var appListRVAdapter: AppListRVAdapter
     private val viewModel: MainActivityViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,7 +63,7 @@ class MainFragment : Hilt_MainFragment(R.layout.fragment_main) {
         }
 
         // Recycler View
-        val appListRVAdapter = appListAdapterFactory.getAdapter()
+        appListRVAdapter = appListAdapterFactory.getAdapter()
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.appList.collect { list ->
@@ -64,5 +72,12 @@ class MainFragment : Hilt_MainFragment(R.layout.fragment_main) {
             }
         }
         view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
+        if (key == panicAppListKey) {
+            appListRVAdapter.submitList(viewModel.getAppList().filter { it.panicApp })
+        }
     }
 }

@@ -33,7 +33,7 @@ class MainActivityViewModel @Inject constructor(
         _appList.value = getAppList()
     }
 
-    private fun getAppList(): List<App> {
+    fun getAppList(): List<App> {
         val pkgList = sharedPreferences.getStringSet(panicAppListKey, emptySet())?.toSet()
         if (pkgList.isNullOrEmpty()) return CommonUtils.getAllPackages(context)
 
