@@ -5,6 +5,7 @@
 
 package org.calyxos.panic.applist
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -19,20 +20,27 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import org.calyxos.panic.R
 import org.calyxos.panic.main.MainActivityViewModel
+import org.calyxos.panic.utils.CommonUtils
 import javax.inject.Inject
 
 @AndroidEntryPoint(Fragment::class)
-class AppListFragment : Hilt_AppListFragment(R.layout.fragment_app_list) {
+class AppListFragment :
+    Hilt_AppListFragment(R.layout.fragment_app_list),
+    SharedPreferences.OnSharedPreferenceChangeListener {
 
     @Inject
     lateinit var appListAdapterFactory: AppListRVAdapter.AppListAdapterFactory
 
+    @Inject
+    lateinit var sharedPreferences: SharedPreferences
+
+    private lateinit var appListRVAdapter: AppListRVAdapter
     private val viewModel: MainActivityViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val appListRVAdapter = appListAdapterFactory.getAdapter(R.id.appListFragment)
+        appListRVAdapter = appListAdapterFactory.getAdapter(R.id.appListFragment)
 
         // Recycler View
         viewLifecycleOwner.lifecycleScope.launch {
@@ -43,11 +51,18 @@ class AppListFragment : Hilt_AppListFragment(R.layout.fragment_app_list) {
             }
         }
         view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this)
 
         // Floating Action Button
         view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
             viewModel.savePanicAppList(appListRVAdapter.currentList)
             findNavController().navigateUp()
+        }
+    }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
+        if (key == CommonUtils.panicAppListKey) {
+            appListRVAdapter.submitList(viewModel.getAppList())
         }
     }
 }
