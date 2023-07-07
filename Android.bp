@@ -44,6 +44,7 @@ android_app {
 
     required: [
         "privapp_allowlist_org.calyxos.panic",
+        "allowlist_org.calyxos.panic",
     ],
 }
 
@@ -58,5 +59,13 @@ prebuilt_etc {
     src: "privapp_allowlist_org.calyxos.panic.xml",
     system_ext_specific: true,
     sub_dir: "permissions",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "allowlist_org.calyxos.panic",
+    src: "allowlist_org.calyxos.panic.xml",
+    system_ext_specific: true,
+    sub_dir: "sysconfig",
     filename_from_src: true,
 }
