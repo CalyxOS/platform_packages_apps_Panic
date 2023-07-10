@@ -10,6 +10,7 @@
         <item name="android:navigationBarColor">?android:colorBackground</item>
         <item name="android:statusBarColor">?android:colorBackground</item>
         <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="android:switchStyle">@style/SwitchTheme</item>
     </style>
 
     <!-- Light Theme -->
@@ -21,11 +22,14 @@
 
     <style name="PreferenceTheme" parent="PreferenceThemeOverlay">
         <item name="android:layout">@layout/fragment_settings</item>
-        <item name="switchPreferenceCompatStyle">@style/AppTheme.SwitchPreference</item>
     </style>
 
-    <style name="AppTheme.SwitchPreference" parent="@style/Preference.SwitchPreferenceCompat.Material">
-        <item name="widgetLayout">@layout/preference_material_switch</item>
+    <!-- Settings switch theme. -->
+    <style name="SwitchTheme" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:switchMinWidth">52dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:track">@drawable/settingslib_switch_track</item>
+        <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
     </style>
 
 </resources>
