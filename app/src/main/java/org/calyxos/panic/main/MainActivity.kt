@@ -9,7 +9,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
-import androidx.preference.PreferenceManager
 import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.Panic
 import info.guardianproject.panic.PanicResponder
@@ -26,9 +25,8 @@ class MainActivity : Hilt_MainActivity() {
 
         when (intent?.action) {
             Panic.ACTION_TRIGGER -> {
-                val prefManager = PreferenceManager.getDefaultSharedPreferences(this)
                 viewModel.uninstallPanicApps()
-                if (prefManager.getBoolean("exit_app", true)) finish()
+                finish()
             }
             Panic.ACTION_CONNECT -> {
                 val navHostFragment =

@@ -3,6 +3,12 @@
   SPDX-FileCopyrightText: 2023 The Calyx Institute
   SPDX-License-Identifier: Apache-2.0
   -->
-<PreferenceScreen>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="notifications"
+        app:summary="@string/notifications_desc"
+        app:icon="@drawable/ic_notifications"
+        app:title="@string/notifications" />
 
 </PreferenceScreen>
