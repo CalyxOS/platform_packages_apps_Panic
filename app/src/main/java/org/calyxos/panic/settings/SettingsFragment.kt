@@ -5,10 +5,13 @@
 
 package org.calyxos.panic.settings
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import dagger.hilt.android.AndroidEntryPoint
 import org.calyxos.panic.R
@@ -26,5 +29,15 @@ class SettingsFragment : Hilt_SettingsFragment() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.settings_preferences, rootKey)
+
+        findPreference<Preference>("notifications")?.apply {
+            setOnPreferenceClickListener {
+                Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).also {
+                    it.putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+                    startActivity(it)
+                }
+                true
+            }
+        }
     }
 }
