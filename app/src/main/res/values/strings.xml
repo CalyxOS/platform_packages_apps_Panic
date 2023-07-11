@@ -25,4 +25,13 @@
 
     <!-- Settings Fragment -->
     <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_desc">Notifications regarding panic actions</string>
+
+    <!-- Misc -->
+    <string name="panic_channel_title">Panic Actions</string>
+    <string name="panic_channel_desc">Notifications regarding running panic actions</string>
+    <string name="discover_panic_title">Discover new Panic responder app</string>
+    <string name="discover_panic_desc">Configure apps to uninstall on panic in this new app. Previously configured via F-Droid.</string>
+
 </resources>

@@ -43,6 +43,7 @@ android_app {
     },
 
     required: [
+        "default_perms_org.calyxos.panic",
         "privapp_allowlist_org.calyxos.panic",
     ],
 }
@@ -51,6 +52,15 @@ java_import {
     name: "info.guardianproject.panic",
     jars: ["app/libs/info.guardianproject.panic-1.0.jar"],
     sdk_version: "current",
+}
+
+
+prebuilt_etc {
+    name: "default_perms_org.calyxos.panic",
+    system_ext_specific: true,
+    sub_dir: "default-permissions",
+    src: "default_perms_org.calyxos.panic.xml",
+    filename_from_src: true,
 }
 
 prebuilt_etc {
