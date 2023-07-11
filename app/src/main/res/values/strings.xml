@@ -28,4 +28,10 @@
     <string name="exit_app_title">Exit app</string>
     <string name="exit_app_desc">Close this app after running panic actions</string>
 
+    <!-- Misc -->
+    <string name="panic_channel_title">Panic Actions</string>
+    <string name="panic_channel_desc">Notifications regarding running panic actions</string>
+    <string name="discover_panic_title">Discover Panic</string>
+    <string name="discover_panic_desc">Check out the new in-built panic responder app that is better and powerful.</string>
+
 </resources>
