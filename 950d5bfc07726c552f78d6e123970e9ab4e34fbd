@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b285d027_edb58b56",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/BootCompletedReceiver.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T15:59:41Z",
+      "side": 1,
+      "message": "Yes, there is a quick settings tile. \n\nAlso, you can have the power button enabled, but fdroid not configured.\n\nThey\u0027re both edge cases (power button configured + fdroid enabled is likely quite common), but still valid, and we can actually do the proper check (get panic enabled responders) easier, so that\u0027s worth it.",
+      "parentUuid": "6d6973f6_bfea0402",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f5ff997_7b3cce87",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
