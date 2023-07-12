@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dee7570f_5889ab92",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:09:20Z",
+      "side": 1,
+      "message": "Why not just have this be the default? This is different from F-Droid because it\u0027s a dedicated panic app, you\u0027d only ever open it for configuration.",
+      "revId": "1f86ef0a89b65ab4c788072d0759fce38f199121",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eacca3b5_6bff7c33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:09:20Z",
+      "side": 1,
+      "message": "I don\u0027t mind merging this now and then reverting later if that\u0027s easier.",
+      "revId": "1f86ef0a89b65ab4c788072d0759fce38f199121",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
