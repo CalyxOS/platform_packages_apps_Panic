@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74337a62_238aae95",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:11:06Z",
+      "side": 1,
+      "message": "Unsure if still needed. Doesn\u0027t hurt",
+      "revId": "fa300ef4413570a99a96358e4a466d4f9db71ba3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
