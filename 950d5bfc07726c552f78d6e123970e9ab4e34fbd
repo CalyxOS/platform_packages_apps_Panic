@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d6973f6_bfea0402",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/BootCompletedReceiver.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-07-12T14:52:40Z",
+      "side": 1,
+      "message": "But is there a way people can trigger ripple outside of the mentioned button? Like what if someone enabled it, used it and then turned off the button (not the app).",
+      "parentUuid": "f3cb9908_e0858bab",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f5ff997_7b3cce87",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
