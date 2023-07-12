@@ -16,6 +16,24 @@
       "message": "We tend to add Co-Authored-By lines (and they have to be in the footer, around the Sign off.",
       "revId": "4e3a69eabbfe2d73075490a9c998d2f625893317",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d20cfea2_db8bab26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:12:42Z",
+      "side": 1,
+      "message": "Those would be in addition to the references, and no need of [0] or [1].",
+      "parentUuid": "06cf12d6_9e4dd766",
+      "revId": "4e3a69eabbfe2d73075490a9c998d2f625893317",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
