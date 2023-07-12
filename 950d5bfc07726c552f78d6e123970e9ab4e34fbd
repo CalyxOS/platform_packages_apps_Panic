@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f3cb9908_e0858bab",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/BootCompletedReceiver.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:14:55Z",
+      "side": 1,
+      "message": "Actually, you could have panic configured without this, although it\u0027s a good check.\n\nThe best check would be if `info.guardianproject.panic.PanicTrigger.getEnabledResponders()` contains `org.fdroid.fdroid`\n\nThat\u0027ll also avoid an additional dependency.",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f5ff997_7b3cce87",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
