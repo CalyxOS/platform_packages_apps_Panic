@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6f5ff997_7b3cce87",
+        "filename": "app/src/main/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:13:01Z",
+      "side": 1,
+      "message": "Could be \"New Panic trigger app\"",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "752817ca_b94d9bb4",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
@@ -20,6 +37,47 @@
         "endLine": 35,
         "endChar": 123
       },
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79bc8d08_1af790e1",
+        "filename": "app/src/main/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:13:01Z",
+      "side": 1,
+      "message": "Nope.",
+      "parentUuid": "752817ca_b94d9bb4",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 123
+      },
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb08b7de_378322b3",
+        "filename": "app/src/main/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:13:01Z",
+      "side": 1,
+      "message": "Something like:\n\n\"Configure apps to uninstall on panic in this new app. Previously configured via F-Droid\"",
       "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
