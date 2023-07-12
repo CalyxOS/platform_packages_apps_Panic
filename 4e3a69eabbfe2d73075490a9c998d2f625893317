@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06cf12d6_9e4dd766",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T14:11:59Z",
+      "side": 1,
+      "message": "We tend to add Co-Authored-By lines (and they have to be in the footer, around the Sign off.",
+      "revId": "4e3a69eabbfe2d73075490a9c998d2f625893317",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
