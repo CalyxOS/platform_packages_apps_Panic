@@ -16,6 +16,24 @@
       "message": "Add a comment here, only using reflection because it won\u0027t compile with gradle / in Android Studio otherwise.\n\nCan do in a followup commit to avoid disturbing chain.",
       "revId": "9d22bec2ba32e7118a62055770290cffab82a061",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b9b76ac_1eb48593",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/CommonUtils.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-07-14T08:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b03452c7_ad2f5832",
+      "revId": "9d22bec2ba32e7118a62055770290cffab82a061",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
