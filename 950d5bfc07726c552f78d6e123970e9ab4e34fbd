@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "346db8a4_a95c2f89",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/BootCompletedReceiver.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-07-14T08:22:53Z",
+      "side": 1,
+      "message": "PanicKit library doesn\u0027t seem to work. The said `getEnabledResponders()` method returns an empty set regardless of which apps are enabled or not.",
+      "parentUuid": "b285d027_edb58b56",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f5ff997_7b3cce87",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
