@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8073894a_3305521e",
+        "filename": "app/src/main/java/org/calyxos/panic/utils/BootCompletedReceiver.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-07-19T17:57:33Z",
+      "side": 1,
+      "message": "I\u0027m going to remove the system2user topic from this change and add it here: https://review.calyxos.org/c/CalyxOS/platform_packages_apps_Ripple/+/18589\n\nIf that\u0027s wrong feel free to undo",
+      "parentUuid": "d31f784f_7a9a250e",
+      "revId": "950d5bfc07726c552f78d6e123970e9ab4e34fbd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f5ff997_7b3cce87",
         "filename": "app/src/main/res/values/strings.xml",
         "patchSetId": 1
