@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1c2e7b2_a84b8c5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-11T20:07:40Z",
+      "side": 1,
+      "message": "Forgot that we allow people to click on root view to also check items easily",
+      "revId": "e2bb7b32d8f1e57d9a46977f029a254aa7c68174",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
