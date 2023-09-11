@@ -20,6 +20,11 @@ import org.calyxos.panic.R
 @AndroidEntryPoint(DialogFragment::class)
 class ConfirmationDialogFragment : Hilt_ConfirmationDialogFragment() {
 
+    override fun onStart() {
+        super.onStart()
+        isCancelable = false
+    }
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val packageManager = requireContext().packageManager
         val callingPkgInfo = packageManager.getApplicationInfo(
