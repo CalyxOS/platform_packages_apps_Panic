@@ -76,6 +76,7 @@ class AppListRVAdapter @AssistedInject constructor(
 
                 setOnCheckedChangeListener { _, isChecked ->
                     currentList.find { it.packageName == app.packageName }?.panicApp = isChecked
+                    submitList(currentList)
                 }
             }
 
