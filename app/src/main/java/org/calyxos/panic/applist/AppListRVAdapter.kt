@@ -74,9 +74,10 @@ class AppListRVAdapter @AssistedInject constructor(
                 isChecked = app.panicApp
                 isVisible = currentDestId == R.id.appListFragment
 
-                setOnCheckedChangeListener { _, isChecked ->
-                    currentList.find { it.packageName == app.packageName }?.panicApp = isChecked
-                    submitList(currentList)
+                setOnCheckedChangeListener { view, isChecked ->
+                    if (view.isShown) {
+                        currentList.find { it.packageName == app.packageName }?.panicApp = isChecked
+                    }
                 }
             }
 
