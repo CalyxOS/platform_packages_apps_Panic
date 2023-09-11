@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9cb66bc_f4729105",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2023-09-11T19:29:24Z",
+      "side": 1,
+      "message": "This seem to fix the issue where a user mentioned that going back and forth both screen results in weird behavior of random apps being selected.",
+      "revId": "d394141bee2fbd254c4bb639471ec6beb88d6d36",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
