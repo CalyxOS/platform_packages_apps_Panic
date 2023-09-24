@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: 2023 The Calyx Institute
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 pluginManagement {
     repositories {
         google()
@@ -13,4 +18,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Panic"
-include ':app'
+include(":app")
