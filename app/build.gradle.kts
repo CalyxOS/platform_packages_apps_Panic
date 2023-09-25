@@ -69,7 +69,8 @@ hilt {
 
 dependencies {
 
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    compileOnly(fileTree(mapOf("dir" to "libs", "include" to listOf("android.jar", "libcore.jar"))))
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("info.guardianproject.panic-1.0.jar"))))
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
