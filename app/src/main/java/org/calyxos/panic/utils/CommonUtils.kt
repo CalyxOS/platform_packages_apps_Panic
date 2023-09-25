@@ -20,11 +20,9 @@ object CommonUtils {
     private const val TAG = "CommonUtils"
 
     class PackageDeleteObserver : IPackageDeleteObserver.Stub() {
-        // Taken from frameworks/base/core/java/android/content/pm/PackageManager.java
-        private val deleteSucceed = 1
 
         override fun packageDeleted(p0: String?, p1: Int) {
-            if (p1 != deleteSucceed) Log.d(TAG, "Failed to delete $p0")
+            if (p1 != PackageManager.DELETE_SUCCEEDED) Log.d(TAG, "Failed to delete $p0")
         }
     }
 
@@ -61,14 +59,7 @@ object CommonUtils {
     }
 
     fun uninstallPackage(packageManager: PackageManager, packageName: String) {
-        // Use reflection as deletePackage method isn't visible even after adding required jar libs
-        Log.i(TAG, "Deleting $packageName")
-        val uninstallTypes = arrayOf(
-            String::class.java,
-            IPackageDeleteObserver::class.java,
-            Int::class.javaPrimitiveType
-        )
-        val method = packageManager.javaClass.getMethod("deletePackage", *uninstallTypes)
-        method.invoke(packageManager, packageName, PackageDeleteObserver(), 0)
+        // Lint complains about missing methods but they are available
+        packageManager.deletePackage(packageName, PackageDeleteObserver(), 0)
     }
 }
