@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21720ac1_aa7ff9c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T22:49:09Z",
+      "side": 1,
+      "message": "lint fails,\n\n`app/build.gradle.kts:91:1 Unexpected blank line(s) before \"}`\n\nActually that\u0027s even without this.",
+      "revId": "6c065533e76d03df15a66979777ace418b03cc16",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
