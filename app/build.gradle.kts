@@ -88,5 +88,4 @@ dependencies {
     val hiltVersion = "2.45"
     kapt("com.google.dagger:hilt-compiler:$hiltVersion")
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-
 }
