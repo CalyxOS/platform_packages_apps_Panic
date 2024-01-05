@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef91676d_d4e4b984",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-01-05T17:01:46Z",
+      "side": 1,
+      "message": "```\n01-05 17:03:41.231  7461  7461 E AndroidRuntime: java.lang.IllegalArgumentException: The fragment ConfirmationDialogFragment{c3494cb} (b3e98585-9480-4f99-9ec5-9a67a1778bec tag\u003d7368e52b-8407-4863-b677-c99fb5b90545) is unknown to the FragmentNavigator. Please use the navigate() function to add fragments to the FragmentNavigator managed FragmentManager.\n```",
+      "revId": "072ef10d0672bddd62053f68ba4481786bfd782e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
