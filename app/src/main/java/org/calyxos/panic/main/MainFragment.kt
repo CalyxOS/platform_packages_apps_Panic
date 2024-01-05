@@ -17,10 +17,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.Panic
+import info.guardianproject.panic.PanicResponder
 import kotlinx.coroutines.launch
 import org.calyxos.panic.R
 import org.calyxos.panic.applist.AppListRVAdapter
@@ -44,42 +46,61 @@ class MainFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (activity?.intent?.action != Panic.ACTION_TRIGGER) {
-            // Toolbar
-            val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
-            if (activity?.intent?.action == Intent.ACTION_MAIN) {
-                toolbar.navigationIcon = null
-            } else {
-                toolbar.setNavigationOnClickListener { activity?.finish() }
-            }
+        when (activity?.intent?.action) {
+            Panic.ACTION_TRIGGER -> {
+                view.findViewById<ConstraintLayout>(R.id.mainFragmentLayout).visibility = View.GONE
+                view.findViewById<ConstraintLayout>(R.id.panicActionLayout).visibility = View.VISIBLE
 
-            toolbar.setOnMenuItemClickListener {
-                when (it.itemId) {
-                    R.id.settings -> findNavController().navigate(R.id.settingsFragment)
-                }
-                true
+                val prefManager = PreferenceManager.getDefaultSharedPreferences(requireContext())
+                viewModel.uninstallPanicApps()
+                if (prefManager.getBoolean("exit_app", true)) activity?.finish()
             }
+            Panic.ACTION_CONNECT -> {
+                // Show confirmation dialog if triggering package is a new one
+                val intentReferer = PanicResponder.getConnectIntentSender(activity)
+                val triggerPkgName = PanicResponder.getTriggerPackageName(requireContext())
 
-            // Floating Action Button
-            view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
-                findNavController().navigate(R.id.appListFragment)
-            }
-
-            // Recycler View
-            appListRVAdapter = appListAdapterFactory.getAdapter()
-            viewLifecycleOwner.lifecycleScope.launch {
-                repeatOnLifecycle(Lifecycle.State.STARTED) {
-                    viewModel.appList.collect { list ->
-                        appListRVAdapter.submitList(list.filter { it.panicApp })
-                    }
+                if (intentReferer.isNotBlank() && intentReferer != triggerPkgName) {
+                    findNavController().navigate(R.id.confirmationDialogFragment)
                 }
             }
-            view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
-            sharedPreferences.registerOnSharedPreferenceChangeListener(this)
-        } else {
-            view.findViewById<ConstraintLayout>(R.id.mainFragmentLayout).visibility = View.GONE
-            view.findViewById<ConstraintLayout>(R.id.panicActionLayout).visibility = View.VISIBLE
+            Panic.ACTION_DISCONNECT -> {
+                PanicResponder.checkForDisconnectIntent(activity)
+                activity?.finish()
+            }
         }
+
+        // Toolbar
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+        if (activity?.intent?.action == Intent.ACTION_MAIN) {
+            toolbar.navigationIcon = null
+        } else {
+            toolbar.setNavigationOnClickListener { activity?.finish() }
+        }
+
+        toolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.settings -> findNavController().navigate(R.id.settingsFragment)
+            }
+            true
+        }
+
+        // Floating Action Button
+        view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
+            findNavController().navigate(R.id.appListFragment)
+        }
+
+        // Recycler View
+        appListRVAdapter = appListAdapterFactory.getAdapter()
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.appList.collect { list ->
+                    appListRVAdapter.submitList(list.filter { it.panicApp })
+                }
+            }
+        }
+        view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this)
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
