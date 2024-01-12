@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a8d3d83_39255a9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-01-12T06:57:49Z",
+      "side": 1,
+      "message": "Nah, doesn\u0027t seem to work nor gradle has this issue. I assume some weird dependency in AOSP is causing it.",
+      "revId": "cd017442080a12eac215e6c7e1ea72581330d3d6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
