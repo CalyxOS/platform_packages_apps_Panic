@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dae5945e_4b783340",
+        "filename": "app/src/main/java/org/calyxos/panic/main/MainActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-01-12T07:09:22Z",
+      "side": 1,
+      "message": "Honestly even this doesn\u0027t makes sense as I would expect Ripple to simply not send panic intent to our app if it has been turned off. I assume this is more for do cleanup if you want to situation thing.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 9
+      },
+      "revId": "5e8e1cd1dd0439b087485efa018d61650ea83588",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
