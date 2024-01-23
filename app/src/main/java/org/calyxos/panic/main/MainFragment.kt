@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.Panic
+import info.guardianproject.panic.PanicResponder
 import kotlinx.coroutines.launch
 import org.calyxos.panic.R
 import org.calyxos.panic.applist.AppListRVAdapter
@@ -43,6 +44,16 @@ class MainFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (activity?.intent?.action == Panic.ACTION_CONNECT) {
+            // Show confirmation dialog if triggering package is a new one
+            val intentReferer = PanicResponder.getConnectIntentSender(requireActivity())
+            val triggerPkgName = PanicResponder.getTriggerPackageName(requireContext())
+
+            if (intentReferer.isNotBlank() && intentReferer != triggerPkgName) {
+                findNavController().navigate(R.id.confirmationDialogFragment)
+            }
+        }
 
         if (activity?.intent?.action != Panic.ACTION_TRIGGER) {
             // Toolbar
