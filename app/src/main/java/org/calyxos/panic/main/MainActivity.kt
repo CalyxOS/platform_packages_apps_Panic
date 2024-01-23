@@ -8,7 +8,6 @@ package org.calyxos.panic.main
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.NavHostFragment
 import androidx.preference.PreferenceManager
 import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.Panic
@@ -31,15 +30,15 @@ class MainActivity : Hilt_MainActivity() {
                 if (prefManager.getBoolean("exit_app", true)) finish()
             }
             Panic.ACTION_CONNECT -> {
-                val navHostFragment =
-                    supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-
                 // Show confirmation dialog if triggering package is a new one
                 val intentReferer = PanicResponder.getConnectIntentSender(this)
                 val triggerPkgName = PanicResponder.getTriggerPackageName(this)
 
                 if (intentReferer.isNotBlank() && intentReferer != triggerPkgName) {
-                    navHostFragment.navController.navigate(R.id.confirmationDialogFragment)
+                    ConfirmationDialogFragment().show(
+                        supportFragmentManager,
+                        ConfirmationDialogFragment.TAG,
+                    )
                 }
             }
             Panic.ACTION_DISCONNECT -> {

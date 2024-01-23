@@ -20,6 +20,10 @@ import org.calyxos.panic.R
 @AndroidEntryPoint(DialogFragment::class)
 class ConfirmationDialogFragment : Hilt_ConfirmationDialogFragment() {
 
+    companion object {
+        const val TAG = "ConfirmationDialogFragment"
+    }
+
     override fun onStart() {
         super.onStart()
         isCancelable = false
