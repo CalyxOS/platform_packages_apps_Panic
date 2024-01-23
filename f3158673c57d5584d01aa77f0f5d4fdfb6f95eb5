@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ce9ccd9_8200be4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-01-23T14:32:25Z",
+      "side": 1,
+      "message": "This works, I assume the library has issues in AOSP because gradle was still working fine.",
+      "revId": "f3158673c57d5584d01aa77f0f5d4fdfb6f95eb5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
