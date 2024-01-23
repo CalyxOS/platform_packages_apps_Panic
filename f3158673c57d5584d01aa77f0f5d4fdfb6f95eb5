@@ -16,6 +16,23 @@
       "message": "This works, I assume the library has issues in AOSP because gradle was still working fine.",
       "revId": "f3158673c57d5584d01aa77f0f5d4fdfb6f95eb5",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52298e98_a28062d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-01-23T14:53:05Z",
+      "side": 1,
+      "message": "Prior, I had never opened Panic, but it was crashing when tapping Edit for its settings. Now, it\u0027s asking to Confirm Panic App.",
+      "revId": "f3158673c57d5584d01aa77f0f5d4fdfb6f95eb5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
