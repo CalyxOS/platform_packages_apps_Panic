@@ -34,7 +34,7 @@ object CommonUtils {
         val validPackages = mutableListOf<PackageInfo>()
 
         packageList.forEach {
-            val appInfo = it.applicationInfo
+            val appInfo = it.applicationInfo ?: return@forEach
             if ((
                 appInfo.flags and ApplicationInfo.FLAG_SYSTEM == 0 ||
                     appInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0
