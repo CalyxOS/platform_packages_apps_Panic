@@ -66,10 +66,10 @@ class AppListRVAdapter @AssistedInject constructor(
         val app = getItem(position)
 
         holder.view.apply {
-            val checkBox = findViewById<CheckBox>(R.id.checkBox)
-            findViewById<ImageView>(R.id.appIcon).background = app.icon.toDrawable(resources)
-            findViewById<TextView>(R.id.appName).text = app.name
-            findViewById<TextView>(R.id.appPkgName).text = app.packageName
+            val checkBox = findViewById<CheckBox>(R.id.checkBox)!!
+            findViewById<ImageView>(R.id.appIcon)!!.background = app.icon.toDrawable(resources)
+            findViewById<TextView>(R.id.appName)!!.text = app.name
+            findViewById<TextView>(R.id.appPkgName)!!.text = app.packageName
             checkBox.apply {
                 isChecked = app.panicApp
                 isVisible = currentDestId == R.id.appListFragment

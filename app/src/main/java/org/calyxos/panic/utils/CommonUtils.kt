@@ -34,7 +34,7 @@ object CommonUtils {
         val validPackages = mutableListOf<PackageInfo>()
 
         packageList.forEach {
-            val appInfo = it.applicationInfo
+            val appInfo = it.applicationInfo ?: return@forEach
             if ((
                 appInfo.flags and ApplicationInfo.FLAG_SYSTEM == 0 ||
                     appInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP != 0
@@ -48,9 +48,9 @@ object CommonUtils {
 
         validPackages.forEach { packageInfo ->
             val app = App(
-                packageInfo.applicationInfo.loadLabel(packageManager).toString(),
+                packageInfo.applicationInfo!!.loadLabel(packageManager).toString(),
                 packageInfo.packageName,
-                packageInfo.applicationInfo.loadIcon(packageManager).toBitmap(96, 96)
+                packageInfo.applicationInfo!!.loadIcon(packageManager).toBitmap(96, 96)
             )
             applicationList.add(app)
         }
