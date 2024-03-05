@@ -30,7 +30,9 @@ object CommonUtils {
         val applicationList = mutableListOf<App>()
         val packageManager = context.packageManager
 
-        val packageList = packageManager.getInstalledPackages(PackageManager.PackageInfoFlags.of(0))
+        val packageList = packageManager
+            .getInstalledPackages(PackageManager.PackageInfoFlags.of(0))
+            .filter { it.applicationInfo != null }
         val validPackages = mutableListOf<PackageInfo>()
 
         packageList.forEach {
