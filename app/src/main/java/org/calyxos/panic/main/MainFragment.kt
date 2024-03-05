@@ -48,12 +48,12 @@ class MainFragment :
             // Toolbar
             val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
             if (activity?.intent?.action == Intent.ACTION_MAIN) {
-                toolbar.navigationIcon = null
+                toolbar?.navigationIcon = null
             } else {
-                toolbar.setNavigationOnClickListener { activity?.finish() }
+                toolbar?.setNavigationOnClickListener { activity?.finish() }
             }
 
-            toolbar.setOnMenuItemClickListener {
+            toolbar?.setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.settings -> findNavController().navigate(R.id.settingsFragment)
                 }
@@ -61,7 +61,7 @@ class MainFragment :
             }
 
             // Floating Action Button
-            view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
+            view.findViewById<FloatingActionButton>(R.id.floatingActionButton)?.setOnClickListener {
                 findNavController().navigate(R.id.appListFragment)
             }
 
@@ -74,11 +74,11 @@ class MainFragment :
                     }
                 }
             }
-            view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
+            view.findViewById<RecyclerView>(R.id.recyclerView)?.adapter = appListRVAdapter
             sharedPreferences.registerOnSharedPreferenceChangeListener(this)
         } else {
-            view.findViewById<ConstraintLayout>(R.id.mainFragmentLayout).visibility = View.GONE
-            view.findViewById<ConstraintLayout>(R.id.panicActionLayout).visibility = View.VISIBLE
+            view.findViewById<ConstraintLayout>(R.id.mainFragmentLayout)?.visibility = View.GONE
+            view.findViewById<ConstraintLayout>(R.id.panicActionLayout)?.visibility = View.VISIBLE
         }
     }
 

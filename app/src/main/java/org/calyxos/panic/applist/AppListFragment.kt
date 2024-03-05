@@ -50,11 +50,11 @@ class AppListFragment :
                 }
             }
         }
-        view.findViewById<RecyclerView>(R.id.recyclerView).adapter = appListRVAdapter
+        view.findViewById<RecyclerView>(R.id.recyclerView)?.adapter = appListRVAdapter
         sharedPreferences.registerOnSharedPreferenceChangeListener(this)
 
         // Floating Action Button
-        view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
+        view.findViewById<FloatingActionButton>(R.id.floatingActionButton)?.setOnClickListener {
             viewModel.savePanicAppList(appListRVAdapter.currentList)
             findNavController().navigateUp()
         }
