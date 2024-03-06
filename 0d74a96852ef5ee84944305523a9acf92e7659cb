@@ -16,6 +16,24 @@
       "message": "Should update jars",
       "revId": "0d74a96852ef5ee84944305523a9acf92e7659cb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a8f4562_43441601",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-06T17:37:09Z",
+      "side": 1,
+      "message": "Doesn\u0027t have to be a blocker, can still merge this and update afterward\n\nLikely won\u0027t make a difference at this point.",
+      "parentUuid": "ccb27a34_16da858f",
+      "revId": "0d74a96852ef5ee84944305523a9acf92e7659cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
