@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2949079f_095789fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-03-06T15:04:37Z",
+      "side": 1,
+      "message": "We should use requireViewById as AOSP does",
+      "revId": "b7173d8319e311622cc48aa1c4de4442c07c86be",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
