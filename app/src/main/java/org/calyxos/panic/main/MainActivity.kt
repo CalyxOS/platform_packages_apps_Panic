@@ -9,6 +9,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
 import info.guardianproject.panic.Panic
 import info.guardianproject.panic.PanicResponder
@@ -21,6 +22,7 @@ class MainActivity : Hilt_MainActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DynamicColors.applyToActivityIfAvailable(this)
         setContentView(R.layout.activity_main)
 
         when (intent?.action) {
