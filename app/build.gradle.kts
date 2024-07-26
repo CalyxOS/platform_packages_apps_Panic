@@ -7,7 +7,7 @@ plugins {
     id("com.android.application")
     id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.kapt")
+    id("com.google.devtools.ksp")
     id("org.jlleitschuh.gradle.ktlint")
 }
 
@@ -59,10 +59,6 @@ android {
     }
 }
 
-kapt {
-    correctErrorTypes = true
-}
-
 hilt {
     enableAggregatingTask = false
 }
@@ -111,7 +107,7 @@ dependencies {
     }
     // https://android.googlesource.com/platform/external/dagger2/+/refs/tags/android-14.0.0_r29
     val hiltVersion = "2.51.1"
-    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+    ksp("com.google.dagger:hilt-compiler:$hiltVersion")
     implementation("com.google.dagger:hilt-android:$hiltVersion")
 
     testImplementation("junit:junit:4.13.2")
