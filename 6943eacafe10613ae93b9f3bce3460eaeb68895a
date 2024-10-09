@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81013830_8a22d21c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2024-10-09T13:16:55Z",
+      "side": 1,
+      "message": "3 button navigation bar looks a bit odd without scrim but I assume that\u0027s due to some outdated library like material component or activity. It doesn\u0027t breaks anything so I assume it can be ignored for now.",
+      "revId": "6943eacafe10613ae93b9f3bce3460eaeb68895a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
