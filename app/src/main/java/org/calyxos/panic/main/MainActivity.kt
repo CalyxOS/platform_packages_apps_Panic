@@ -8,6 +8,8 @@ package org.calyxos.panic.main
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.preference.PreferenceManager
 import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,6 +26,13 @@ class MainActivity : Hilt_MainActivity() {
         super.onCreate(savedInstanceState)
         DynamicColors.applyToActivityIfAvailable(this)
         setContentView(R.layout.activity_main)
+
+        // Adjust root view's paddings for edgeToEdge display
+        ViewCompat.setOnApplyWindowInsetsListener(window.decorView.rootView) { root, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            root.setPadding(0, insets.top, 0, 0)
+            windowInsets
+        }
 
         when (intent?.action) {
             Panic.ACTION_TRIGGER -> {
